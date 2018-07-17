@@ -18,9 +18,6 @@ public:
 	//PID Coefficients increment
 	std::vector<double> dK;
   
-	//previous cte	
-	double cte_old;
-  
 	//PID Coefficients tuning is needed
 	bool tuning_enabled;
 	

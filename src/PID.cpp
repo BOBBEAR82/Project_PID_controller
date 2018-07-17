@@ -18,11 +18,9 @@ void PID::Init(double Kp_int, double Ki_int, double Kd_int)
 	
 	p_error = 0;
 	i_error = 0;
-	d_error = 0;
+	d_error = 0;	
 	
-	cte_old = 0;	
-	
-	PID::dK = {0.6*Kp_int, 0.6*Ki_int, 0.3*Kd_int};
+	PID::dK = {0.2*Kp_int, 0.2*Ki_int, 0.2*Kd_int};
   
 	tuning_enabled = 0;
 	
@@ -53,11 +51,9 @@ void PID::Init(double Kp_int, double Ki_int, double Kd_int)
 
 void PID::UpdateError(double cte) 
 {
+	d_error = cte - p_error;
 	p_error = cte;
 	i_error += cte;
-	d_error = cte - cte_old;
-	
-	cte_old = cte;
 	
 	if (tuning_enabled)
 	{

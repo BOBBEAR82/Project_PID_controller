@@ -21,9 +21,9 @@ Then I start using the implemeted Twiddle algorithm as learned in class in code 
 
 Each evaluation cycle is about 1370 steps, which should be as close as possible to one full lap, in order to get best comparable error.
 
-Then the Triddle algorithm starts the iteration of tuning PID coefficients. after ~790,000 steps, the final coefficients value is `0.644186, 0.021039, 6.5168`.
+Then the Triddle algorithm starts the iteration of tuning PID coefficients. after ~310,000 steps, the final coefficients value is `0.27208, 0.00236, 1.99644`.
 
-The log of coefficients updates and best according best error change is in the .xls file.
+The log of coefficients updates and best according best error change is in the .xls file, tab "1ST TUNING".
 
 For speed control, I use a very simple throttle control based on `cte` power 2. With Larger cte, the throttle is released more in order to lowe the speed. I manually tune the factor to be 0.15, which can keep the vehicle speed in 20-32 mph range.
 
